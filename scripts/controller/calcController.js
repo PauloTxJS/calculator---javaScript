@@ -202,8 +202,15 @@ class CalcController{
     }
 
     getResult(){
+        try {
 
-        return eval(this._operation.join(""));
+            return eval(this._operation.join(""));
+
+        } catch(e) {
+
+            this.setError();
+
+        } 
 
     }
 
